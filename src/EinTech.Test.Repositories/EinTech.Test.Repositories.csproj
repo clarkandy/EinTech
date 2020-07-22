@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EinTech.Test.Core\EinTech.Test.Core.csproj" />
+    <ProjectReference Include="..\Eintech.Test.Infrastructure\Eintech.Test.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,109 @@
+﻿@model EinTech.Test.Core.Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section Styles {
+    <link href="~/lib/data-tables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+}
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EinTech Test - Andy Clark</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="btn btn-primary pull-right text-light" data-toggle="modal" data-target=".bd-example-modal-lg">Add Person</a>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        <table class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+        </table>
+    </main>
+</div>
+<div id="add-person" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Person</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="FirstName" class="form-control" placeholder="Firstname" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="LastName" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="LastName" class="form-control" placeholder="Lastname" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/lib/data-tables/jquery.dataTables.min.js"></script>
+    <script src="~/lib/data-tables/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            var table = $("table").dataTable({
+                "processing": true,
+                "ajax": {
+                    url: "api/person"
+                },
+                "columns": [
+                    { "data": "id" },
+                    { "data": "firstName" },
+                    { "data": "lastName" },
+                    { "data": "created" }
+                ]
+            });
+
+            $('#add-person').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            })
+
+            $("form").submit(function (e) {
+                e.preventDefault();
+
+                var data = {
+                    firstName: $("[name=FirstName]").val(),
+                    lastName: $("[name=LastName]").val()
+                };
+
+                $.ajax({
+                    url: "api/person",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(data),
+                    success: function () {
+                        table.api().ajax.reload();
+                        $('#add-person').modal('hide');
+                    }
+                });
+            });
+        });
+    </script>
+}

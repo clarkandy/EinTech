@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EinTech.Test.Core", "src\EinTech.Test.Core\EinTech.Test.Core.csproj", "{CB43FC00-4255-478A-A388-90E59EAA469C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8E446BD-D7CE-439F-89CA-C6F014F0767A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0FCCC28-9B55-4DD9-BE93-03C2658FD7CE}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EinTech.Test.Repositories", "src\EinTech.Test.Repositories\EinTech.Test.Repositories.csproj", "{2E8D5057-1CD0-4B1A-8773-0DC2BBBF356E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eintech.Test.Infrastructure", "src\Eintech.Test.Infrastructure\Eintech.Test.Infrastructure.csproj", "{505BC55D-D1F0-4147-B00A-8928C956A2E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EinTech.Test.Services", "src\EinTech.Test.Services\EinTech.Test.Services.csproj", "{F7ED620C-0DBE-41F1-A255-9FDEA3C5FAFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EinTech.Test.Web", "src\EinTech.Test.Web\EinTech.Test.Web.csproj", "{3446B7F9-72A1-404A-BCAC-16FB66969CA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9D6F6709-1B1C-4885-B5FC-28B6F1C95862}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EinTech.Test.Web.UnitTests", "Tests\EinTech.Test.Web.UnitTests\EinTech.Test.Web.UnitTests.csproj", "{1B11E1AC-941D-4198-94D1-CCA3BBF66B5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EinTech.Test.Services.UnitTests", "tests\EinTech.Test.Services.UnitTests\EinTech.Test.Services.UnitTests.csproj", "{7A15C61A-BE46-4AED-BD1F-8574AFE67607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EinTech.Test.Repositories.Tests", "src\EinTech.Test.Repositories.Tests\EinTech.Test.Repositories.Tests.csproj", "{B2AD9552-5791-47A7-AA26-3CED1571BA2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB43FC00-4255-478A-A388-90E59EAA469C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB43FC00-4255-478A-A388-90E59EAA469C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB43FC00-4255-478A-A388-90E59EAA469C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB43FC00-4255-478A-A388-90E59EAA469C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8D5057-1CD0-4B1A-8773-0DC2BBBF356E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8D5057-1CD0-4B1A-8773-0DC2BBBF356E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8D5057-1CD0-4B1A-8773-0DC2BBBF356E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8D5057-1CD0-4B1A-8773-0DC2BBBF356E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505BC55D-D1F0-4147-B00A-8928C956A2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505BC55D-D1F0-4147-B00A-8928C956A2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505BC55D-D1F0-4147-B00A-8928C956A2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505BC55D-D1F0-4147-B00A-8928C956A2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7ED620C-0DBE-41F1-A255-9FDEA3C5FAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7ED620C-0DBE-41F1-A255-9FDEA3C5FAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7ED620C-0DBE-41F1-A255-9FDEA3C5FAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7ED620C-0DBE-41F1-A255-9FDEA3C5FAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3446B7F9-72A1-404A-BCAC-16FB66969CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3446B7F9-72A1-404A-BCAC-16FB66969CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3446B7F9-72A1-404A-BCAC-16FB66969CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3446B7F9-72A1-404A-BCAC-16FB66969CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B11E1AC-941D-4198-94D1-CCA3BBF66B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B11E1AC-941D-4198-94D1-CCA3BBF66B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B11E1AC-941D-4198-94D1-CCA3BBF66B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B11E1AC-941D-4198-94D1-CCA3BBF66B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A15C61A-BE46-4AED-BD1F-8574AFE67607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A15C61A-BE46-4AED-BD1F-8574AFE67607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A15C61A-BE46-4AED-BD1F-8574AFE67607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A15C61A-BE46-4AED-BD1F-8574AFE67607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2AD9552-5791-47A7-AA26-3CED1571BA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2AD9552-5791-47A7-AA26-3CED1571BA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2AD9552-5791-47A7-AA26-3CED1571BA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2AD9552-5791-47A7-AA26-3CED1571BA2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CB43FC00-4255-478A-A388-90E59EAA469C} = {D8E446BD-D7CE-439F-89CA-C6F014F0767A}
+		{2E8D5057-1CD0-4B1A-8773-0DC2BBBF356E} = {D8E446BD-D7CE-439F-89CA-C6F014F0767A}
+		{505BC55D-D1F0-4147-B00A-8928C956A2E4} = {D8E446BD-D7CE-439F-89CA-C6F014F0767A}
+		{F7ED620C-0DBE-41F1-A255-9FDEA3C5FAFF} = {D8E446BD-D7CE-439F-89CA-C6F014F0767A}
+		{3446B7F9-72A1-404A-BCAC-16FB66969CA5} = {D8E446BD-D7CE-439F-89CA-C6F014F0767A}
+		{1B11E1AC-941D-4198-94D1-CCA3BBF66B5F} = {9D6F6709-1B1C-4885-B5FC-28B6F1C95862}
+		{7A15C61A-BE46-4AED-BD1F-8574AFE67607} = {9D6F6709-1B1C-4885-B5FC-28B6F1C95862}
+		{B2AD9552-5791-47A7-AA26-3CED1571BA2A} = {9D6F6709-1B1C-4885-B5FC-28B6F1C95862}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {464774B4-65AC-4E3F-82C7-9821DBE0D6BA}
+	EndGlobalSection
+EndGlobal
